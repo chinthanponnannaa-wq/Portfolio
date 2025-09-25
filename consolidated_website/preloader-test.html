@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .loader-wrapper {
+            position: relative;
+            width: 600px;
+        }
+
+        .logo img {
+            width: 600px !important;
+            height: auto !important;
+            object-fit: contain;
+        }
+
+        .clipped-light {
+            background-image: -webkit-gradient(linear, right top, left top, color-stop(50%, #1e1e1e), color-stop(50%, #0ff), color-stop(74%, #0083ef), to(#1e1e1e));
+            background-image: linear-gradient(270deg, #1e1e1e 50%, #0ff 50%, #0083ef 74%, #1e1e1e);
+        }
+
+        .overlay {
+            background-image: -webkit-gradient(linear, left top, right top, color-stop(17%, black), color-stop(18.2%, rgba(0, 0, 0, 0))), -webkit-gradient(linear, left top, right top, color-stop(86%, rgba(0, 0, 0, 0)), to(#000000)), radial-gradient(circle closest-side at 50% 50%, rgba(0, 0, 0, 0) 78%, #000000 97%);
+            background-image: linear-gradient(to right, black 17%, rgba(0, 0, 0, 0) 18.2%), linear-gradient(to right, rgba(0, 0, 0, 0) 86%, #000000), radial-gradient(circle closest-side at 50% 50%, rgba(0, 0, 0, 0) 78%, #000000 97%);
+        }
+
+        .shapes-overlay {
+            background-image: radial-gradient(circle farthest-side, rgba(0, 0, 0, 0) 61%, #000);
+        }
+    </style>
+</head>
+<body>
+    <div class="preloader">
+        <div class="loader-wrapper">
+            <div class="logo w-embed"><img src="https://i.imgur.com/fKbTaRo.jpeg" alt="Logo"></div>
+            <div class="overlay"></div>
+            <div class="shapes-overlay"></div>
+            <div class="bar">
+                <div class="clipper">
+                    <div class="clipped-light clipped-light-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
